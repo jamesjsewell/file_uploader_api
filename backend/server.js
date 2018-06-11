@@ -19,7 +19,6 @@ const S3_BUCKET = process.env.S3_BUCKET,
     UPPY_SECRET = process.env.UPPY_SECRET,
     SHOULD_DEBUG = process.env.SHOULD_DEBUG
 
-console.log(S3_BUCKET, S3_REGION, S3_KEY_ID)
 // runs express app and sets defined port
 var app = express()
 const PORT = process.env.PORT || 3000 
