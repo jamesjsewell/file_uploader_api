@@ -22,6 +22,7 @@ const S3_BUCKET = process.env.S3_BUCKET,
 // runs express app and sets defined port
 var app = express()
 const PORT = process.env.PORT || 3000 
+app.set("port", PORT)
 
 // middleware, transforms http request so that you can use req.body json format 
 // for accepting json data from http requests
@@ -65,7 +66,7 @@ const options = {
 
 app.use(uppy.app(options))
 
-const server = app.listen(3000, () => {
+const server = app.listen(PORT, () => {
     console.log('listening on port 3000')
 })
   
